@@ -15,17 +15,13 @@
         <h4>Guess a number between 1 to 100</h4>
         <button class="btn">Play</button>
     </div>
-
     <!-- Content -->
 
     <div class="content-container">
-         <label for="guess">Your Guess:</label>
-          <input type="text" id="guess" value="523" />
-          <input type="button" onclick="yourGuess()" value="submit" /><br />
-           <input type="button" id="showguesses" onclick="showGuesses()" value="Show My Guesses" /> 
-           <legend> Output </legend>
- <textarea id="output" name="output" rows="5" style="width: 100%;"></textarea>
-        <p>83</p>
+         <p>Your guess</p>
+        <input type="text" id="guess" placeholder="type a number" />
+        <input type="button" onclick="do_game()" value="submit" /><br />
+        <p id="guess">no</p>
     </div>
 
 
@@ -62,24 +58,6 @@
 
     <!--  -->
   
- <legend>Inputs</legend>
-
-
- 
- <input type="button" id="showguesses" onclick="showGuesses()" value="Show My Guesses" />  
- <input type="button" onclick="generateNumberToGuess(true)" value="New Game" /><br />
- <input id="cheat" type="checkbox" value="cheat" onclick="showNumberToGuess()" />
- <label for="cheat">Cheat</label>
- <div id="cheatShow" style="display: none;">
-  <input id="numberToGuess" type="text" />
-  <label for="numberToGuess">Number to guess</label>
- </div>
-
-<fieldset id="guesses" class="guesses">
- <legend> Output </legend>
- <textarea id="output" name="output" rows="5" style="width: 100%;"></textarea>
-</fieldset>
-
     
 
 
