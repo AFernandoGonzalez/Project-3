@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    
+
+    <div class="header">
+        <h4>Guess a number between 1 to 100</h4>
+        <button class="btn">Play</button>
+    </div>
+
+    <!-- Content -->
+
+    <div class="content-container">
+         <label for="guess">Your Guess:</label>
+          <input type="text" id="guess" value="523" />
+          <input type="button" onclick="yourGuess()" value="submit" /><br />
+           <input type="button" id="showguesses" onclick="showGuesses()" value="Show My Guesses" /> 
+           <legend> Output </legend>
+ <textarea id="output" name="output" rows="5" style="width: 100%;"></textarea>
+        <p>83</p>
+    </div>
+
+
+    <!-- Controls -->
+
+    <div>
+        <div>
+
+            <!-- show at the start -->
+            <p>Lets start Guessing</p>
+            <!-- only show when playing -->
+            <p id="toHigh">To high</p>
+            <p id="toLow">To low</p>
+            <!-- show when you win -->
+            <p>correct Number</p>
+            <p>Score: 5</p>
+            <p>HighScore</p>
+
+            <!-- after winning the game the  game resets  -->
+            
+        </div>
+        <div>
+            <p>Inputing the number from js</p>
+            <button>a button to pick a number</button>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!--  -->
+  
+ <legend>Inputs</legend>
+
+
+ 
+ <input type="button" id="showguesses" onclick="showGuesses()" value="Show My Guesses" />  
+ <input type="button" onclick="generateNumberToGuess(true)" value="New Game" /><br />
+ <input id="cheat" type="checkbox" value="cheat" onclick="showNumberToGuess()" />
+ <label for="cheat">Cheat</label>
+ <div id="cheatShow" style="display: none;">
+  <input id="numberToGuess" type="text" />
+  <label for="numberToGuess">Number to guess</label>
+ </div>
+
+<fieldset id="guesses" class="guesses">
+ <legend> Output </legend>
+ <textarea id="output" name="output" rows="5" style="width: 100%;"></textarea>
+</fieldset>
+
+    
+
+
+
+
+
+
+    <!-- Scripts -->
+    <script src="./script.js"></script>
+</body>
+</html>
