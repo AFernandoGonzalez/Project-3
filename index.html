@@ -10,56 +10,45 @@
 <body>
 
     
-
-    <div class="header">
-        <h4>Guess a number between 1 to 100</h4>
-        <button class="btn">Play</button>
-    </div>
-    <!-- Content -->
-
-    <div class="content-container">
-         <p>Your guess</p>
-        <input type="text" id="guess" placeholder="type a number" />
-        <input type="button" onclick="do_game()" value="submit" /><br />
-        <p id="guess">no</p>
-    </div>
-
-
-    <!-- Controls -->
-
-    <div>
-        <div>
-
-            <!-- show at the start -->
-            <p>Lets start Guessing</p>
-            <!-- only show when playing -->
-            <p id="toHigh">To high</p>
-            <p id="toLow">To low</p>
-            <!-- show when you win -->
-            <p>correct Number</p>
-            <p>Score: 5</p>
-            <p>HighScore</p>
-
-            <!-- after winning the game the  game resets  -->
-            
-        </div>
-        <div>
-            <p>Inputing the number from js</p>
-            <button>a button to pick a number</button>
-        </div>
-    </div>
-
-
-
-
-
-
-
-
     <!--  -->
+
+    <div class="main-img">
+
+    
   
+    <div class="title">
+        <h1>Guessing game!</h1>
+        <p class="paragraphs">Can you guess a number between 1 and 100.</p>
+    </div>
+        
+    <div class="container-info">
+        <p class="paragraphs">What is your name?</p>
+        <input type="text" placeholder="Name" name="name" required class="field" id="name">&nbsp;&nbsp;
+        <button class="btn" onclick="startGame()">Lets Play</button>
+    </div> 
     
 
+    <div id="guess" style="visibility: hidden;">
+    <div id="welcome">
+
+    </div>
+
+    <div class="container-info">
+
+         <p class="paragraphs">Enter your guess: </p>
+        <input type="text" placeholder="" name="userNumber" required class="field" id="userNumber" min="1" max="20">
+        &nbsp;&nbsp;
+        <button class="btn" id="submit" value="clear" onclick="enterGuess(); return false; ">Check</button>
+        <br>
+        <br>
+        <div class="paragraph1" id="result"></div>
+        <br>
+        <button class="btn" id="playAgain" style="visibility: hidden" onClick="window.location.reload()">Play Again</button>
+
+    </div>
+
+    </div>
+   
 
 
 
