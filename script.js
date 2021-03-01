@@ -56,7 +56,7 @@ var totalScore = 10;
 var highScore = [];
 
 var randomNumber = Math.floor(Math.random() * 100) +1;
-console.log(randomNumber);
+// console.log(randomNumber);
 
 var numberGuessed = document.getElementById("userNumber").value;
 
