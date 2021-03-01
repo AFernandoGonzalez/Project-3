@@ -1,6 +1,7 @@
 
 
 var mySong = document.getElementById('mySong');
+// mySong.autoplay;
 mySong.volume = 0.6
 var playBtn = document.getElementById('playBtn');
 
@@ -81,6 +82,8 @@ function enterGuess() {
         msg5.textContent = `High score is:  ${totalScore - 1}` ;
         var resultNumber = document.getElementById('result');
   	      resultNumber.innerHTML = `<h1> The number was ${randomNumber} </h1>`;
+
+          document.body.style.backgroundImage = "url('./img/gameOver.jpg')";
       }
       totalScore -=1;
       //fix to get to 0 only and start the game again
@@ -100,6 +103,11 @@ function enterGuess() {
          document.getElementById("submit").style.visibility = "hidden";
          var resultNumber = document.getElementById('result');
   	      resultNumber.innerHTML = `<h1> Your number is ${userGuess} </h1>`;
+          
+         //Change backgroud image once the player has won the game.
+          document.body.style.backgroundImage = "url('https://media.giphy.com/media/fxsqOYnIMEefC/giphy.gif')";
+          
+
 
       // Reset button
       document.getElementById("playAgain").style.visibility = "visible";
