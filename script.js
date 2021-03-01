@@ -1,15 +1,25 @@
 
+
 var mySong = document.getElementById('mySong');
+mySong.volume = 0.6
 var playBtn = document.getElementById('playBtn');
+
+
 
 playBtn.onclick = function(){
   if (mySong.paused){
     mySong.play();
-    mySong.volume = 0.2
+    mySong.currentTime = 200;
+    mySong.volume = 0.6
+    
   }else{
     mySong.pause();
   }
 }
+
+
+
+
 
 function startGame() {
 	
@@ -112,42 +122,4 @@ function enterGuess() {
     }
 
 }
-
-
-
-
-// end test
-
-
-// Random number
-// var randomNumber = Math.floor(Math.random() * 4) +1;
-// console.log(randomNumber);
-
-// var numberGuessed = document.getElementById("userNumber").value;
-
-// function enterGuess() {
-	//Get Users Guess
-  // let userGuess = document.getElementById("userNumber").value;
-    // if (userGuess == '' ){
-         // result in html 
-        // alert('Please enter a number');   
-    // }
-    // else if (userGuess < 1 || userGuess > 100){
-         // result in html 
-        // alert('Please enter a number between 1 and 100');   
-    // }
-    // else if (userGuess == randomNumber) {
-        // result in html
-    // result.innerHTML = `You Win!! ${userGuess}<br>`; 
-    // showing the Reset button
-    // document.getElementById("playAgain").style.visibility = "visible";
-    // }
-    // else {
-        // result in html
-//     document.getElementById("userNumber").value = ""; 
-//     let lowHigh = userGuess > randomNumber ? "high" : "low";
-//   	result.innerHTML ='Your guess is too ' + lowHigh + ', Please try again';
-//   }
-
-// }
 
