@@ -2,15 +2,21 @@
 
 *{
     margin: 0;
-    padding: 0;
+    padding: 0px;
+}
+
+:root {
+    /* Base font size */
+    font-size: 10px;
+
+    /* color for neon */
+    --neon-text-color: #f40;
+    --neon-border-color: #08f;
 }
 
 body {
-    background-image: url(./img/casino.jpg);
+    background-image: url(./img/3000x1259.jpg);
     background-size: cover;
-    /* width: 20em; */
-    height: 1200px;
-    /* <------ */
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -27,10 +33,258 @@ body {
     color: rgb(246, 247, 208);
     text-shadow: 0 0 5px rgb(170, 20, 20), 0 0 10px rgb(238, 241, 28), 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
     filter: blur(0.007em);
-    animation: shake 2.5s linear forwards;
+    animation: zoomAnimation 2.5s linear forwards;
 }
 
-@keyframes shake {
+.title1 h1 {
+    font-size: 30px;
+    font-family: 'Montserrat',
+        sans-serif;
+    font-weight: 500;
+    text-align: center;
+    /* margin-top: 40px; */
+    color: rgb(246, 247, 208);
+    text-shadow: 0 0 5px rgb(170, 20, 20), 0 0 10px rgb(238, 241, 28), 0 0 15px #0073e6, 0 0 20px #0073e6, 0 0 25px #0073e6, 0 0 30px #0073e6, 0 0 35px #0073e6;
+    filter: blur(0.007em);
+    animation: zoomAnimation 2.5s linear forwards;
+}
+
+
+
+.titleP{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: 00;
+    font-size: 25px;
+    color: rgb(255, 255, 255);
+    margin-top: 30px;
+    text-align: center;
+}
+
+.paragraphs {
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    padding-top: 15px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+
+.paragraph1{
+    font-family: 'Montserrat',
+    sans-serif;
+    font-weight: 300;
+    font-size: 25px;
+    border-radius: 10px;
+    padding: 15px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    animation: neonAnimation 3.5s infinite alternate;
+}
+
+
+
+/*  */
+
+.container-info{
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    align-items: center; 
+    /* border: 2px solid red;    */
+}
+
+
+.container-welcome{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.field {
+    width: 150px;
+    height: 30px;
+    display: grid;
+    margin-top: 10px;
+    border-style: none;
+    text-align: center;
+    border-radius: 10px;
+}
+
+#userNumber{
+    background-color: rgb(0, 0, 0);
+    width: 80px;
+    height: 80px;
+    display: grid;
+    margin-top: 10px;
+    border-style: none;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+}
+
+#welcome {
+   font-size: 10px;
+   color: brown;
+   text-align: center;
+   margin-top: 10px;
+}
+
+
+/* Buttons */
+
+.btn{
+    background-color: red;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    color: white;
+}
+
+.btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn1 a{
+   color: white;
+   text-decoration: none;
+   
+}
+
+#playAgain {
+    font-size: 20px;
+    font-weight: 900;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: cyan 2px solid;
+    padding: 20px;
+    color: rgb(242, 250, 7);
+    text-shadow: 0 0 5px rgb(170, 20, 20),
+    0 0 10px rgb(238, 241, 28),
+    0 0 15px #003a74,
+    0 0 20px #0073e6,
+    0 0 25px #0073e6,
+    0 0 30px #0073e6,
+    0 0 35px #0073e6;
+    filter: blur(0.007em);
+    animation: zoomAnimation 2.5s linear forwards;
+}
+
+
+.btnPlayPause button{
+    background-color: rgb(255, 255, 0);
+    color: rgb(255, 8, 0);
+    height: 100px;
+    width: 100px;
+    border-style: none;
+    border-radius: 50%;
+    animation: neonAnimation 3.5s infinite alternate;
+}
+
+
+
+/*  */
+
+.container{
+    max-width: 100%;
+    /* display: flex; */
+    
+}
+.container h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+.container p {
+    font-size: 50px;
+    text-align: center;
+}
+
+
+/*  */
+.grid-container {
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* background-color: #2196F3; */
+    padding: 10px;
+}
+
+.grid-item {
+    /* background-color: rgba(255, 255, 255, 0.8); */
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+
+
+.grid-item1 {
+    max-width: 100%;
+    height: 100px;
+    /* border: 1px solid rgba(0, 0, 0, 0.8); */
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    /* border-right: solid 2px green; */
+    border-width: 10px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    animation: neonAnimation 3.5s infinite alternate;
+}
+
+
+
+/* Animations */
+
+@keyframes neonAnimation {
+
+    0%,
+    19%,
+    21%,
+    23%,
+    25%,
+    54%,
+    56%,
+    75%,
+    100% {
+
+        text-shadow:
+            -0.2rem -0.2rem 1rem rgb(15, 187, 150),
+            0.2rem 0.2rem 1rem rgb(236, 9, 206),
+            0 0 2rem var(--neon-text-color),
+            0 0 4rem var(--neon-text-color),
+            0 0 6rem var(--neon-text-color),
+            0 0 8rem var(--neon-text-color),
+            0 0 10rem var(--neon-text-color);
+
+        box-shadow:
+            0 0 .5rem #fff,
+            inset 0 0 .5rem #fff,
+            0 0 2rem var(--neon-border-color),
+            inset 0 0 2rem var(--neon-border-color),
+            0 0 4rem var(--neon-border-color),
+            inset 0 0 4rem var(--neon-border-color);
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+        box-shadow: none;
+    }
+}
+
+
+@keyframes zoomAnimation {
 
     5%,
     15%,
@@ -73,110 +327,3 @@ body {
     }
 }
 
-
-.paragraphs {
-    font-family: 'Montserrat',
-    sans-serif;
-    font-weight: 300;
-    font-size: 25px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-
-.paragraph1{
-    font-family: 'Montserrat',
-    sans-serif;
-    font-weight: 300;
-    font-size: 25px;
-    background-color: red;
-    border-radius: 10px;
-    padding: 15px;
-    color: rgb(255, 255, 255);
-    text-align: center;
-}
-
-/*  */
-
-.container-info{
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    padding-top: 20px;
-    align-items: center;    
-}
-
-.field {
-    width: 150px;
-    height: 30px;
-    display: grid;
-    margin-top: 10px;
-    border-style: none;
-    text-align: center;
-    border-radius: 10px;
-}
-
-#userNumber{
-    background-color: rgb(0, 0, 0);
-    width: 80px;
-    height: 80px;
-    display: grid;
-    margin-top: 10px;
-    border-style: none;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-size: 50px;
-}
-
-#welcome {
-   font-size: 10px;
-   color: brown;
-   text-align: center;
-   margin-top: 10px;
-}
-
-
-/* Buttons */
-
-.btn{
-    background-color: red;
-    padding: 10px;
-    border-radius: 10px;
-    border-style: none;
-    color: white;
-}
-
-
-/*  */
-
-.container{
-    max-width: 100%;
-    /* display: flex; */
-    
-}
-.container h1{
-    font-size: 50px;
-    text-align: center;
-}
-
-.container p {
-    font-size: 50px;
-    text-align: center;
-}
-
-
-/*  */
-.grid-container {
-    display: grid;
-    grid-template-columns: auto auto;
-    background-color: #2196F3;
-    padding: 10px;
-}
-
-.grid-item {
-    background-color: rgba(255, 255, 255, 0.8);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-}

@@ -5,37 +5,125 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>Guess Game</title>
 </head>
 <body>
 
+
+
     
     <!--  -->
+    <div class="grid">
+        <!--  -->
+        <div id="start" class="grid-item title">
 
-    <div class="main-img">
+            <h1>Guessing game!</h1>
+            <p class="paragraphs">Can you guess a number between 1 and 100.</p>
+            <!--  -->
+            <div class="container-info">
+                <p class="paragraphs">What is your name?</p>
+                <input type="text" placeholder="Name" name="name" required class="field" id="name">
+                <button class="btn" onclick="startGame()"><a href="#game">Lets Play</a></button>
+            </div>
+
+            <!-- Play Music -->
+            <div class="btnPlayPause">
+                
+                <button id="playBtn">Play | Pause</button>
+            </div>
+
+            <!--  -->
+            
+        </div>
+        <!--  -->
+    </div>
+
+   
+    
+
+
+    <div id="game" class=" ">
+        <div class="grid-item">
+        <div id="guess" style="visibility: hidden;">
+            <div class="titleP" id="welcome0"></div>
+            <div class="title1" id="welcome"></div>
+            <!--  -->
+            <div  class="container-info">
+                
+                <p class="paragraphs">Enter your guess number: </p>
+                <input type="text" placeholder="" name="userNumber" required class="field" id="userNumber" min="1" max="20">
+                <button class="btn" id="submit" value="clear" onclick="enterGuess(); return false; ">Check</button>
+                <button class="btn" id="tryAgain" style="visibility: hidden" onClick="window.location.reload()"><a href="#start">Try Again</a> </button>
+                <br>
+                <br>
+                <div class="paragraph1" id="result">?</div>
+                
+                <button class="btn1" id="playAgain" style="visibility: hidden" onClick="window.location.reload()"><a href="#start">Play Again</a></button>
+            </div>  
+    </div>
+
+
+    
+    <!--  -->
+    <div class="grid-container paragraph1">
+         <div class=" ">
+        <div class="grid-item1 ">
+            <p class="" id="message2"># of Guesses: </p>
+            <p class="" id="message3">Guessed Numbers:</p>
+        </div>
+       
+    </div>
+    <div class=" ">
+        <div class="grid-item1 ">
+             <p class="" id="message1">Your Guess is: </p>
+            
+        </div>
+       
+    </div>
+    <div class=" ">
+        <div class="grid-item1 ">
+             <p class="" id="message4">Your Score </p>
+            <p class="" id="message5">Your Highscore ...</p>
+        </div>
+       
+    </div>
+    
+
+    </div>
+
+    <audio autoplay id="mySong" src="./media/The Final Countdown .mp3" type='audio/mp3' ></audio>
+   
+    
+
 
     
   
-    <div class="title">
+    <!-- <div class="title">
         <h1>Guessing game!</h1>
         <p class="paragraphs">Can you guess a number between 1 and 100.</p>
-    </div>
+    </div> -->
         
-    <div class="container-info">
+    <!-- <div class="container-info">
         <p class="paragraphs">What is your name?</p>
         <input type="text" placeholder="Name" name="name" required class="field" id="name">&nbsp;&nbsp;
         <button class="btn" onclick="startGame()">Lets Play</button>
     </div> 
+     -->
+
+    <!-- <div id="guess" style="visibility: hidden;">
+     
+   
+    <div class="titleP" id="welcome0"></div>
+    <div class="title1" id="welcome"></div>
+        
     
 
-    <div id="guess" style="visibility: hidden;">
-    <div id="welcome">
 
-    </div>
+    
 
     <div class="container-info">
-
-         <p class="paragraphs">Enter your guess: </p>
+        
+         <p class="paragraphs">Enter your guess number: </p>
         <input type="text" placeholder="" name="userNumber" required class="field" id="userNumber" min="1" max="20">
         &nbsp;&nbsp;
         <button class="btn" id="submit" value="clear" onclick="enterGuess(); return false; ">Check</button>
@@ -45,12 +133,31 @@
         <br>
         <button class="btn" id="playAgain" style="visibility: hidden" onClick="window.location.reload()">Play Again</button>
 
-    </div>
+    </div> -->
 
-    </div>
+    <!-- </div> -->
    
+    <!-- <div class="grid-container">
+        <div class="grid-item">
+            <p class="test" id="message1">your guess is</p>
+        </div>
+        <div class="grid-item">
+            <p class="test" id="message2"># of gueses: </p>
+            <p class="test" id="message3">Guessed Numbers are: </p>
+        </div>
+        <div class="grid-item">
+            <p class="test" id="message4">Score </p>
+            <p class="test" id="message5">Highscore Waiting ...</p>
+        </div>
+    </div>
+    <p class="test" id="message1">your guess is</p>
 
+    <p class="test" id="message2"># of gueses: </p>
+    <p class="test" id="message3">Guessed Numbers are: </p>
+    <p class="test" id="message4">Score </p>
+    <p class="test" id="message5">Highscore Waiting ...</p>
 
+    <button class="btn" id="tryAgain" style="visibility: hidden" onClick="window.location.reload()">Try Again</button> -->
 
 
 
